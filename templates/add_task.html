@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+
+{% block title %}Add Task{% endblock %}
+
+{% block content %}
+<div class="form-container">
+    <h2>Add New Task</h2>
+
+    <form method="POST" action="{{url_for('adding_task')}}">
+        <div class="form-group">
+            <label for="title">Task Title:</label>
+            <input type="text" id="title" name="title" required placeholder="Enter task title">
+        </div>
+
+        <div class="form-actions">
+            <button type="submit" class="btn btn-primary">Add Task</button>
+            <a href="{{ url_for('adding_task') }}" class="btn btn-secondary">Cancel</a>
+        </div>
+    </form>
+</div>
+{% endblock %}
